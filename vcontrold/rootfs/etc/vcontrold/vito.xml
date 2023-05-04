@@ -576,6 +576,13 @@
       <description>Setze die Raumsolltemperatur normal M2 in Grad C</description>
       <device ID="2053"/>
     </command>
+    <command name="getTempRaumNorIstM2" protocmd="getaddr">
+      <addr>0898</addr>
+      <len>1</len>
+      <unit>UTI</unit>
+      <description>Ermittle die Raumsisttemperatur normal M2 in Grad C</description>
+      <device ID="2053"/>
+    </command>
     <command name="getTempRaumRedSollM1" protocmd="getaddr">
       <addr>2307</addr>
       <len>1</len>
@@ -1002,7 +1009,7 @@
       <unit>BA</unit>
       <description>Betriebsart M2</description>
       <device ID="2053"/>
-    </command>   
+    </command>
     <!--  Betriebsart set  -->
     <command name="setBetriebArtM1" protocmd="setaddr">
       <addr>2301</addr>

@@ -187,11 +187,17 @@
       </device>
     </command>
     <!-- BRENNER -->
+
     <command name="getBrennerStatus" protocmd="getaddr">
       <addr>55D3</addr>
       <len>1</len>
       <unit>RT</unit>
       <description>Ermittle den Brennerstatus</description>
+      <device ID="2098">
+        <addr>0842</addr>
+        <len>1</len>
+        <unit>ST</unit>
+      </device>
       <device ID="2053">
         <addr>22</addr>
         <len>1</len>
@@ -429,20 +435,10 @@
       </device>
     </command>
     <command name="getTempVListM2" protocmd="getaddr">
-      <addr>080C</addr>
+      <addr>3900</addr>
       <len>2</len>
       <unit>UT</unit>
       <description>Ermittle die Vorlauftemperatur M2 in Grad C</description>
-      <device ID="2053">
-        <addr>41</addr>
-        <unit>UT1</unit>
-        <len>1</len>
-      </device>
-      <device ID="20CB">
-        <addr>3900</addr>
-        <unit>UT</unit>
-        <len>2</len>
-      </device>
     </command>
     <command name="getTempVLsollM1" protocmd="getaddr">
       <addr>2544</addr>
@@ -579,7 +575,7 @@
     <command name="getTempRaumNorIstM2" protocmd="getaddr">
       <addr>0898</addr>
       <len>1</len>
-      <unit>UTI</unit>
+      <unit>UT</unit>
       <description>Ermittle die Raumsisttemperatur normal M2 in Grad C</description>
       <device ID="2053"/>
     </command>
@@ -1017,6 +1013,13 @@
       <unit>BA</unit>
       <description>Setze Betriebsart M1</description>
     </command>
+    <command name="setBetriebArtM2" protocmd="setaddr">
+      <addr>3301</addr>
+      <len>1</len>
+      <unit>BA</unit>
+      <description>Betriebsart M2</description>
+      <device ID="2053"/>
+    </command>
     <!-- SPARBETRIEB (SPARSCHWEIN) -->
     <command name="getBetriebSparM1" protocmd="getaddr">
       <addr>2302</addr>
@@ -1030,6 +1033,13 @@
       <len>1</len>
       <unit>RT</unit>
       <description>Betriebsart Spar M2</description>
+      <device ID="2053"/>
+    </command>
+    <command name="setBetriebSparM2" protocmd="setaddr">
+      <addr>3302</addr>
+      <len>1</len>
+      <unit>RT</unit>
+      <description>Setze Betriebsart Spar M2</description>
       <device ID="2053"/>
     </command>
     <!-- PARTYBETRIEB -->

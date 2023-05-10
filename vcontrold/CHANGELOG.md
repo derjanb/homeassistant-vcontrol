@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 1.8.5
+
+- Added setBetriebArtM2 and setBetriebSparM2
+
 ## 1.8.4
 
 - Added polish translation (@Qbunjo)
